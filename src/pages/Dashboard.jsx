@@ -69,11 +69,42 @@ const Dashboard = () => {
                     <h3 className="sr-only">Categories</h3>
                     <ul className="font-medium text-gray-600 px-2 py-3">
                       <li className="flex items-center mb-3 ml-3">
-                        <UserIcon className="h-6 w-6" aria-hidden="true" />
-                        <Link className="ml-2" to="users">
-                          Users
+                        <ClipboardListIcon
+                          className="h-6 w-6"
+                          aria-hidden="true"
+                        />
+                        <Link className="ml-2" to="orders">
+                          Orders
                         </Link>
                       </li>
+                      {admin && (
+                        <>
+                          <li className="flex items-center mb-3 ml-3">
+                            <UserIcon className="h-6 w-6" aria-hidden="true" />
+                            <Link className="ml-2" to="users">
+                              Users
+                            </Link>
+                          </li>
+                          <li className="flex items-center mb-3 ml-3">
+                            <ViewGridAddIcon
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                            <Link className="ml-2" to="add-food-item">
+                              Add Food Item
+                            </Link>
+                          </li>
+                          <li className="flex items-center mb-3 ml-3">
+                            <ShieldCheckIcon
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                            <Link className="ml-2" to="make-admin">
+                              Make an Admin
+                            </Link>
+                          </li>
+                        </>
+                      )}
                     </ul>
                   </div>
                 </div>
